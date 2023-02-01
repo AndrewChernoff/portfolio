@@ -1,0 +1,16 @@
+.footer {
+    height: 30vh;
+    background-color: aqua;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.footerContent div {
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+}

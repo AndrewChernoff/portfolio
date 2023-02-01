@@ -1,0 +1,29 @@
+.projectsBlock {
+    height: 100vh;
+}
+
+.projectsContainer {
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.projectItems {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.projectItem {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    min-height: 200px;
+    border: 1px solid;
+}
+
+.img {
+    height: 100px;
+    max-width: 150px;
+}

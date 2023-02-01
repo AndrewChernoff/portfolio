@@ -1,6 +1,8 @@
 import './App.css';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import MyProjects from './components/MyProjects/MyProjects';
 import Skills from './components/Skills/Skills';
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
       <Header />
       <Main />
       <Skills />
+      <MyProjects />
+      <Footer />
     </div>
   );
 }
