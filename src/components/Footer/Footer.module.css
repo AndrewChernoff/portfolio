@@ -1,6 +1,14 @@
+.title {
+    background: blue;
+}
+
 .footer {
     height: 30vh;
     background-color: aqua;
+}
+
+.footerContainer {
+    flex-direction: column;
 }
 
 .footerContent {

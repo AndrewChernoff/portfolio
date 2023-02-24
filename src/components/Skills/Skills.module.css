@@ -1,5 +1,5 @@
 .skillsBlock {
-    height: 100vh;
+    min-height: 100vh;
     background: rgb(126, 225, 126);
 }
 
@@ -10,6 +10,7 @@
 
 .title {
     color: #eeeef5;
+    background: red;
 }
 
 .skills {
