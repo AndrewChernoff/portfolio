@@ -1,0 +1,14 @@
+.projectsBlock {
+    min-height: 100vh;
+    padding: 6.5rem 0;
+    
+    .projectItems {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+

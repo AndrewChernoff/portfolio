@@ -1,40 +1,30 @@
-import style from "./MyProjects.module.css";
+import style from "./MyProjects.module.scss";
 import styleContainer from "../../common/styles/ContainerStyles.module.css";
+import Title from "../../common/components/Title";
+import socialNetwork from "../../assets/images/social_network.jpg"
+import todolist from "../../assets/images/todolist.png"
+import Project from "./Project";
 
 const MyProjects = () => {
+
+  const socialNetworkImg = {
+    background: `url(${socialNetwork})`
+  }
+
+  const todolistImg = {
+    background: `url(${todolist})`
+  }
+
   return (
     <div className={style.projectsBlock}>
-      <div className={`${styleContainer.container} ${styleContainer.container}`}>
-        <h2 className={style.title}>My Projects</h2>
+      <div className={`${styleContainer.container} ${style.projectsContainer}`}>
 
+    <Title title={'My Projects'} titleDescr={'Some of my recent projects'}/>
 
     <div className={style.projectItems}>
-        <div className={style.projectItem}>
-          <div className={style.imageContainer}>
-            <button>Look</button>
-          </div>
-
-          <div className={style.projectItem__content}>
-            <div className={style.projectItem__title}>Network</div>
-            <div className={style.projectItem__descr}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </div>
-          </div>
-        </div>
-
-        <div className={style.projectItem}>
-          <div className={style.imageContainer}>
-            <button>Look</button>
-          </div>
-          
-          <div className={style.projectItem__content}>
-            <div className={style.projectItem__title}>Network</div>
-            <div className={style.projectItem__descr}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </div>
-          </div>
-        </div>
-        </div>
+        <Project backgroundStyle={socialNetworkImg} title={'Social Network'} descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}/>
+        <Project backgroundStyle={todolistImg} title={'Todolist'} descr={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}/>
+    </div>
       </div>
     </div>
   );

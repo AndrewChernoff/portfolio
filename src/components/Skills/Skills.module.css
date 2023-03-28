@@ -8,10 +8,10 @@
     flex-direction: column;
 }
 
-.title {
+/* .title {
     color: #eeeef5;
     background: red;
-}
+} */
 
 .skills {
     display: flex;
@@ -20,3 +20,10 @@
     border: red 1px solid;
     width: 100%;
 }
+
+
+@media  screen and (max-width: 624px) {
+    .skills {
+        justify-content: center;
+    }
+  }

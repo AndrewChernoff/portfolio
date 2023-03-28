@@ -1,0 +1,17 @@
+@import '../../assets//sass/variables.scss';
+
+.title {
+    margin: 0 auto 3rem auto;
+    div {
+        width: 95px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 auto 0.5rem auto;
+        background-color: $titleColor;
+    }
+    .titleDescr { 
+        padding: 0;
+        margin: 0;
+        font-weight: 600;
+    }
+}
