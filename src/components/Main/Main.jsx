@@ -1,4 +1,4 @@
-import style from './Main.module.css';
+import style from './Main.module.scss';
 import styleContainer from '../../common/styles/ContainerStyles.module.css';
 
 const Main = () => {
@@ -8,6 +8,8 @@ const Main = () => {
                 <span>Hi there</span>
                 <h1>I am Andrew Chernov</h1>
                 <p>Frontend developer</p>
+                
+                <a href='#myWorks'>View my works</a>
             </div>
 
             <div className={style.photo}>

@@ -1,0 +1,36 @@
+@import '../../assets/sass/variables.scss'; 
+
+.main {
+    background: rgb(222, 199, 210);
+    height: 100vh;
+
+    .text {
+        max-width: 350px;
+        //background-color: darkgrey;
+
+        span, h1 {
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 36px;
+        }
+
+        a  {
+        background-color: $titleColor;
+        border-color: $titleColor;
+        color: #212529;
+        padding: 10px 30px;
+        text-decoration: none;
+    }
+
+        
+    }
+
+    .photo {
+        width: 300px;
+        height: 400px;
+        background-color: darkgrey;
+    }
+}

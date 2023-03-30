@@ -1,0 +1,22 @@
+.skillsBlock {
+    min-height: 100vh;
+    background: rgb(248, 249, 250);
+    padding: 6.5rem 0;
+
+    .skillsContainer {
+        justify-content: flex-start;
+        flex-direction: column;
+
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border: red 1px solid;
+            width: 100%;
+
+            @media screen and (max-width: 624px) {
+                justify-content: center;
+            }
+        }
+    }
+}

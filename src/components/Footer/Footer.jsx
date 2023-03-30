@@ -1,4 +1,4 @@
-import style from './Footer.module.css';
+import style from './Footer.module.scss';
 import styleContainer from "../../common/styles/ContainerStyles.module.css";
 
 const Footer = () => {
@@ -7,13 +7,13 @@ const Footer = () => {
             <h2 className={style.title}>Andrew Chernov</h2>
 
             <div className={style.footerContent}>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <a>Instagram</a>
+                <a>Telegram</a>
+                <a>Facebook</a>
+                <a>Github</a>
             </div>
 
-            <h3>Все права защищены</h3>
+            <h3>All Rights Reserved.</h3>
         </div>
     </div>
 }

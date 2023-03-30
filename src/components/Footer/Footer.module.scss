@@ -1,0 +1,51 @@
+@import '../../assets/sass/variables.scss';
+
+.footer {
+    height: 30vh;
+    background-color: $backgroundColor;
+
+    .footerContainer {
+        flex-direction: column;
+
+        .title {
+            font-size: 16px;
+            color: $textColor;
+        }
+
+        .footerContent {
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center;
+            flex-direction: column; */
+            width: 40%;
+
+
+            /* height: 30px;
+                width: 30px;
+                background-color: grey; */
+            @media screen and (max-width: 960px) {
+                //justify-content: center;
+                //margin-top: 5px;
+                flex-direction: column;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                font-size: 16px;
+                color: $textColor;
+
+                @media screen and (max-width: 960px) {
+                    margin-top: 5px;
+                }
+            }
+
+        }
+
+        h3 {
+            font-size: 16px;
+            color: rgb(162, 158, 158);
+        }
+    }
+}
