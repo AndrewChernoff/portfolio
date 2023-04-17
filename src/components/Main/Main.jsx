@@ -5,16 +5,16 @@ const Main = () => {
     return <div className={style.main}>
         <div className={styleContainer.container}>
             <div className={style.text}>
-                <span>Hi there</span>
-                <h1>I am Andrew Chernov</h1>
-                <p>Frontend developer</p>
+                <span>HI, I'M FRONTEND DEVELOPER</span>
+                <h1>Andrew</h1>
+                <p>based in Chelyabinsk, Russia</p>
                 
                 <a href='#myWorks'>View my works</a>
             </div>
 
-            <div className={style.photo}>
+       {/*      <div className={style.photo}>
 
-            </div>
+            </div> */}
         </div>
         </div>
 }

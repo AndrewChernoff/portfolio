@@ -1,4 +1,5 @@
 import './App.css';
+import AboutMe from './components/AboutMe/AboutMe';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <Main />
+      <AboutMe />
       <Skills />
       <MyProjects />
       <Footer />
