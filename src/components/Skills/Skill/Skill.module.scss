@@ -1,28 +1,20 @@
 .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* width: 250px; */
-    max-width: 300px;
-    /* background-color: rgb(171, 165, 165); */
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-
-    .icon {
-        width: 60px;
-        height: 60px;
-        //background-color: rgb(61, 59, 59);
-    }
-    
-    .title {
-        margin: 5px 0;
-        font-size: 24px;
-        font-weight: 600;
-    }
-    
-    .description {
+    width: 100%;
+    margin-top: 15px;
+    &__name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
         font-size: 16px;
-        color: #6c757d;
+    }
+    .progress {
+        height: 8px;
+        background-color: rgb(227, 222, 222);
+        position: relative;
+        &__bar {
+            ///width: 85%;
+            height: 8px;
+            background-color: gold;
+        }
     }
 }

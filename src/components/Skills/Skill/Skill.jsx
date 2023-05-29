@@ -2,10 +2,14 @@ import style from './Skill.module.scss';
 
 const Skill = (props) => {
     return <div className={style.skill}>
-        <div className={style.icon}>{props.icon}</div>
-        <h3 className={style.title}>{props.title}</h3>
-        <span className={style.description}>{props.description}</span>
+    <div className={style.skill__name}>
+        <div>{props.skillName}</div>
+        <div>{props.percent}%</div>
     </div>
+    <div className={style.progress}>
+        <div className={style.progress__bar} style={{width: `${props.percent}%`}}></div>
+    </div>
+</div>
 }
 
 export default Skill

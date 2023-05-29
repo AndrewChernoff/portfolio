@@ -42,4 +42,24 @@
     font-size: 100px;
 }
 }
+    &__personal {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 24px;
+        &_item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h3 {
+                font-size: 16px;
+                color: #6c757d;
+                margin: 0;
+            }
+            div {
+                font-weight: 600;       
+            }         
+        }
+    }
 }

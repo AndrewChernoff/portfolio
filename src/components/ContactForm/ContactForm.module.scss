@@ -1,0 +1,29 @@
+@import '../../assets/sass/variables.scss';
+
+.contacts {
+    background: $formBackgroundColor;
+    h2 {
+        font-size: 40px;
+    }
+    &__blocks {
+        display: flex;
+    }
+    &__descr {
+        width: 50%;
+        &_item {
+            h3 {
+                font-size: 21px;
+                margin: 0;
+            }
+           address, p {
+            font-family: Poppins;
+                font-size: 18px;
+                margin: 0;
+            }
+            margin-bottom: 16px;
+        }
+    }
+    &__form {
+        width: 50%;
+    }
+}

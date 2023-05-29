@@ -17,12 +17,31 @@ const AboutMe = () => {
            </div>  
          </div>
 
-        <div className={style.aboutMe__exp}>
-            <div className={style.aboutMe__exp_circle}>1</div>
-            <h2>Years of Experiance</h2>
-        </div>
+          <div className={style.aboutMe__exp}>
+              <div className={style.aboutMe__exp_circle}>1</div>
+              <h2>Years of Experiance</h2>
+          </div>
        
-         </div>
+
+        </div>
+        <div className={style.aboutMe__personal}>
+            <div className={style.aboutMe__personal_item}>
+              <h3>Name:</h3>
+              <div>Andrew Chernov</div>
+            </div>
+            <div className={style.aboutMe__personal_item}>
+              <h3>Email:</h3>
+              <div>whitedrew538@gmail.com</div>
+            </div>
+            <div className={style.aboutMe__personal_item}>
+              <h3>Date of birth:</h3>
+              <div>14 July, 2000</div>
+            </div>
+            <div className={style.aboutMe__personal_item}>
+              <h3>From:</h3>
+              <div>Chelyabinsk, Russia</div>
+            </div>
+          </div>
        </div>
      </div>
    );
