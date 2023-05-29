@@ -1,8 +1,9 @@
 import React from "react";
 import styleContainer from "../../common/styles/ContainerStyles.module.css";
-import style from "./ContactForm.module.scss";
+import style from "./Contact.module.scss";
+import ContactFrom from "./ContactForm/ContactForm";
 
-const ContactForm = () => {
+const Contact = () => {
   return (
     <div className={style.contacts}>
       <div className={`${styleContainer.container}`}>
@@ -27,7 +28,7 @@ const ContactForm = () => {
           </div>
 
           <div className={style.contacts__form}>
-                <h2>Estimate your Project?</h2>
+                <ContactFrom />
         </div>  
         </div>
         
@@ -36,4 +37,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Contact;
