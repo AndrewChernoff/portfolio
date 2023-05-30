@@ -3,6 +3,12 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: 600px) {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
 }
 
 &__info {
@@ -31,6 +37,9 @@
         white-space: nowrap;
         h2 {
             margin: 10px 0 0 0;
+             @media screen and (max-width: 800px) {
+                font-size: 20px;
+            }
         }
 
     &_circle {
@@ -45,6 +54,7 @@
     &__personal {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         width: 100%;
         margin-top: 24px;
         &_item {

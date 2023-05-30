@@ -1,13 +1,17 @@
 @import '../../assets/sass/variables.scss';
 
 .contacts {
-    height: 550px;
+    min-height: 550px;
     background: $formBackgroundColor;
     h2 {
         font-size: 40px;
+        @media screen and (max-width: 940px) {
+            font-size: 30px;
+        }
     }
     &__blocks {
         display: flex;
+        gap: 15px;
     }
     &__descr {
         width: 50%;
@@ -20,6 +24,9 @@
             font-family: Poppins;
                 font-size: 18px;
                 margin: 0;
+                @media screen and (max-width: 480px) {
+                    font-size: 13px;
+                }
             }
             margin-bottom: 16px;
         }

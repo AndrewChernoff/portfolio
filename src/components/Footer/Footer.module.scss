@@ -6,6 +6,7 @@
 
     .footerContainer {
         flex-direction: column;
+        flex-wrap: nowrap;
 
         .title {
             font-size: 16px;
