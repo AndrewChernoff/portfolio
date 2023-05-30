@@ -2,8 +2,9 @@ import React from 'react';
  import { Formik, Form, Field } from 'formik';
  import * as Yup from 'yup';
  import TextField from '@mui/material/TextField';
- import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@mui/styles';
 import EmptyTextarea from '../../../common/components/EmptyTextarea';
+import style from './ContactForm.module.scss'
 
  
  const SignupSchema  = Yup.object().shape({
@@ -11,7 +12,7 @@ import EmptyTextarea from '../../../common/components/EmptyTextarea';
      .min(2, 'Too Short!')
      .max(50, 'Too Long!')
      .required('Required'),
-   email: Yup.string().email('Invalid email').required('Required'),
+  // email: Yup.string().email('Invalid email').required('Required'),
  });
  
 const ContactFrom = () => {
@@ -22,7 +23,7 @@ const ContactFrom = () => {
      <Formik
        initialValues={{
          name: '',
-         lastName: '',
+         help: '',
          email: '',
        }}
        validationSchema={SignupSchema}
@@ -33,8 +34,8 @@ const ContactFrom = () => {
      >
        {({ errors, touched }) => (
          <Form>
-          <div>
-            <label for='name'>What is Your Name:</label>
+          {/* <div>
+            <label htmlFor='name'>What is Your Name:</label>
             <TextField id="standard-basic" 
             InputProps={{
               sx: {
@@ -50,7 +51,7 @@ const ContactFrom = () => {
             </div>
            
            <div>
-           <label for='email'>Your Email Address:</label>
+           <label htmlFor='email'>Your Email Address:</label>
            <TextField id="email" 
             InputProps={{
               sx: {
@@ -63,15 +64,29 @@ const ContactFrom = () => {
               width: '80%',
             }}
             variant="standard" />
-           {errors.email && touched.email ? <div>{errors.email}</div> : null}
-           </div>
+           </div> */}
+
+          <div className={style.field__wrapper}>
+           <label htmlFor='name'>What is Your Name:</label>
+           <Field type="text" name="name" autocomplete="off" className={style.textarea__field}/>
+          </div>
+
+          <div className={style.field__wrapper}>
+           <label htmlFor='email'>Your Email Address:</label>
+           <Field type="text" name="email" autocomplete="off" className={style.textarea__field}/>
+          </div>
+
+          <div className={style.field__wrapper}>
+           <label htmlFor='help'>How can I Help you?:</label>
+           <Field type="text" name="help" as='textarea' autocomplete="off" className={style.textarea__field}/>
+          </div>
            
-           <div>
-           <label for='email'>How can I Help you?:</label>
-           <EmptyTextarea />
-           {errors.email && touched.email ? <div>{errors.email}</div> : null}
-           </div>
-           <button type="submit">Send</button>
+           {/* <div>
+           <label htmlFor='help'>How can I Help you?:</label>
+           <EmptyTextarea id='help'/>
+           {errors.help && touched.help ? <div>{errors.help}</div> : null}
+           </div> */}
+           <button type="submit" className={style.btn}>Send</button>
          </Form>
        )}
      </Formik>

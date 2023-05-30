@@ -1,3 +1,36 @@
-.my__input_field::after {
-  border-bottom-color: red;
+@import '../../../assets/sass/variables.scss';
+
+.field__wrapper {
+  margin-bottom: 1.5rem;
+  .textarea__field {
+    background: $formBackgroundColor;
+    border: none;
+    border-bottom: 1px rgb(49, 49, 49) solid;
+    width: 80%;
+    min-height: 30%;
+    max-height: 30%;
+
+    &:hover {
+      border-bottom: 2px black solid;
+      background: $formBackgroundColor;
+    }
+
+    &:focus {
+      outline: none;
+      background: $formBackgroundColor;
+    }
+  }
+}
+
+.btn {
+    border-width: 2px;
+    font-weight: 500;
+    padding: 0.8rem 2.6rem;
+    transition: all .5s ease;
+    color: white;
+    background: black;
+    border: none;
+    &:hover {
+      background: rgb(49, 49, 49);
+    }
 }
