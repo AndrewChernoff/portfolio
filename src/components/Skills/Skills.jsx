@@ -4,6 +4,7 @@ import Skill from './Skill/Skill';
 import { FaReact } from 'react-icons/fa';
 import { FaJsSquare } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
+import Title from '../../common/components/Title';
 
 const Skills = () => {
 /////////////delete
@@ -14,6 +15,7 @@ const Skills = () => {
     return <div className={style.skillsBlock}>
          
         <div className={`${styleContainer.container} ${style.skillsContainer}`}>
+        <Title title="Skills" titleDescr={"Technologies I know"} />
             <Skill skillName={'HTML & CSS'} percent={85}/>
             <Skill skillName={'JavaScript'} percent={70}/>
             <Skill skillName={'Typescript'} percent={65}/>
