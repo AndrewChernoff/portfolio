@@ -1,5 +1,18 @@
 @import '../../../assets/sass/variables.scss';
 
+
+.my__form {
+   @media screen and (max-width: 750px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+  .header {
+    @media screen and (max-width: 750px) {
+      text-align: center;
+  }
+  }
+
 .field__wrapper {
   margin-bottom: 1.5rem;
   .textarea__field {
@@ -9,6 +22,9 @@
     width: 80%;
     min-height: 30%;
     max-height: 30%;
+    @media screen and (max-width: 750px) {
+      width: 100%;
+  }
 
     &:hover {
       border-bottom: 2px black solid;
@@ -33,4 +49,5 @@
     &:hover {
       background: rgb(49, 49, 49);
     }
+}
 }

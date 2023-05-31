@@ -4,7 +4,6 @@
     background: rgb(222, 199, 210);
     height: 100vh;
     background: url('../../assets//images/background_img.jpg') center center/cover no-repeat;
-    //filter: brightness(50%);
     .text {
         display: flex;
         flex-direction: column;
@@ -37,11 +36,11 @@
         }
         @media screen and (max-width: 500px) {
             span {
-                font-size: 20px;
+                font-size: 23px;
             }
     
             h1 {
-                font-size: 58px;
+                font-size: 40px;
             }
     
             p {

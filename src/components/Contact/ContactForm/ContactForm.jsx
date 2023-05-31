@@ -21,8 +21,8 @@ import style from './ContactForm.module.scss'
  
 const ContactFrom = () => {
 
-  return  <div>
-     <h2>Estimate your Project?</h2>
+  return  <div className={style.my__form}>
+     <h2 className={style.header}>Estimate your Project?</h2>
 
      <Formik
        initialValues={{
@@ -37,7 +37,7 @@ const ContactFrom = () => {
        }}
      >
        {({ errors, touched }) => (
-         <Form>
+         <Form >
           {/* <div>
             <label htmlFor='name'>What is Your Name:</label>
             <TextField id="standard-basic" 
