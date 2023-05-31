@@ -3,6 +3,7 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        gap: 10px;
 
         @media screen and (max-width: 600px) {
             flex-wrap: wrap;
@@ -23,6 +24,9 @@
     }
     &_descr {
         width: 85%;
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
     }
     
 }
