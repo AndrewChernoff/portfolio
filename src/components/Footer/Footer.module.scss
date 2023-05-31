@@ -1,7 +1,7 @@
 @import '../../assets/sass/variables.scss';
 
 .footer {
-    height: 30vh;
+    min-height: 30vh;
     background-color: $backgroundColor;
 
     .footerContainer {
