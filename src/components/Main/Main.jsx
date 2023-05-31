@@ -11,11 +11,7 @@ const Main = () => {
                 
                 <a href='#myWorks'>View my works</a>
             </div>
-
-       {/*      <div className={style.photo}>
-
-            </div> */}
-        </div>
+            </div>
         </div>
 }
 
