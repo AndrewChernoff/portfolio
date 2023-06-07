@@ -1,12 +1,17 @@
 import style from './AboutMe.module.scss';
 import styleContainer from '../../common/styles/ContainerStyles.module.css';
 import Title from '../../common/components/Title';
+import Fade from 'react-reveal/Fade';
+import Rotate from 'react-reveal/Rotate';
 
 const AboutMe = () => {
    return (
      <div className={style.aboutMe}>
        <div className={styleContainer.container}>
          <Title title="About me" titleDescr={"Know Me More"} />
+
+         <Fade bottom cascade>
+
          <div className={style.aboutMe__wrapper}>
          <div className={style.aboutMe__info}>
            <h2>Hi, I'm <span>Andrew Chernov</span></h2>
@@ -16,14 +21,15 @@ const AboutMe = () => {
              to the end user. 
            </div>  
          </div>
-
           <div className={style.aboutMe__exp}>
               <div className={style.aboutMe__exp_circle}>1</div>
               <h2>Years of Experiance</h2>
           </div>
-       
-
         </div>
+        </Fade>
+
+        <Rotate bottom right cascade>
+
         <div className={style.aboutMe__personal}>
             <div className={style.aboutMe__personal_item}>
               <h3>Name:</h3>
@@ -42,6 +48,8 @@ const AboutMe = () => {
               <div>Chelyabinsk, Russia</div>
             </div>
           </div>
+          </Rotate>
+
        </div>
      </div>
    );
