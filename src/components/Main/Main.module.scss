@@ -17,8 +17,11 @@
             font-size: 32px;
         }
 
-        h1 {
-            font-size: 70px;
+        .name {
+            display: flex;
+            flex-direction: row;
+            font-size: 50px;
+            margin: 0;
         }
 
         p {
@@ -39,8 +42,8 @@
                 font-size: 20px;
             }
     
-            h1 {
-                font-size: 40px;
+            .name {
+                font-size: 30px;
             }
     
             p {
