@@ -11,19 +11,26 @@ const Skills = () => {
     const ReactIcon =  <FaReact style={{color: 'rgb(0,0,128)', fontSize: '50px'}}/>
     const JSIcon = <FaJsSquare style={{color: 'yellow', fontSize: '50px'}}/>
     const CSSIcon = <FaCss3Alt style={{color: 'blue', fontSize: '50px'}}/>
+
+    
+    const skills = [
+        {skillName: 'HTML & CSS', percent: 85},
+        {skillName: 'JavaScript', percent: 70},
+        {skillName: 'Typescript', percent: 65},
+        {skillName: 'React', percent: 80},
+        {skillName: 'Redux', percent: 75},
+        {skillName: 'Redux-toolkit', percent: 70},
+        {skillName: 'Material UI', percent: 80},
+        {skillName: 'Unit tests', percent: 70},
+    ];
     
     return <div className={style.skillsBlock}>
          
         <div className={`${styleContainer.container} ${style.skillsContainer}`}>
         <Title title="Skills" titleDescr={"Technologies I know"} />
-            <Skill skillName={'HTML & CSS'} percent={85}/>
-            <Skill skillName={'JavaScript'} percent={70}/>
-            <Skill skillName={'Typescript'} percent={65}/>
-            <Skill skillName={'React'} percent={80}/>
-            <Skill skillName={'Redux'} percent={75}/>
-            <Skill skillName={'Redux-toolkit'} percent={70}/>
-            <Skill skillName={'Material UI'} percent={80}/>
-            <Skill skillName={'Unit tests'} percent={70}/>
+        {skills.map((el, i) => {
+            return <Skill key={i} skillName={el.skillName} percent={el.percent} index={i}/>
+        })}
         </div>
     </div>
 }

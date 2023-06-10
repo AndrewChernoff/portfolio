@@ -5,7 +5,7 @@ import React from 'react';
 import { makeStyles } from '@mui/styles';
 import EmptyTextarea from '../../../common/components/EmptyTextarea';
 import style from './ContactForm.module.scss'
-
+import Rotate from 'react-reveal/Rotate';
  
  const SignupSchema  = Yup.object().shape({
    name: Yup.string()
@@ -21,7 +21,9 @@ import style from './ContactForm.module.scss'
  
 const ContactFrom = () => {
 
-  return  <div className={style.my__form}>
+  return <Rotate top right> 
+  <div className={style.my__form}>
+    
      <h2 className={style.header}>Estimate your Project?</h2>
 
      <Formik
@@ -32,43 +34,11 @@ const ContactFrom = () => {
        }}
        validationSchema={SignupSchema}
        onSubmit={values => {
-         // same shape as initial values
          console.log(values);
        }}
      >
        {({ errors, touched }) => (
          <Form >
-          {/* <div>
-            <label htmlFor='name'>What is Your Name:</label>
-            <TextField id="standard-basic" 
-            InputProps={{
-              sx: {
-                '&::after': {
-                  border: '1px solid black!important',
-                }
-              },
-            }}
-            sx={{
-              width: '80%',
-            }}
-            variant="standard" />
-            </div>
-           
-           <div>
-           <label htmlFor='email'>Your Email Address:</label>
-           <TextField id="email" 
-            InputProps={{
-              sx: {
-                '&::after': {
-                  border: '1px solid black!important',
-                }
-              },
-            }}
-            sx={{
-              width: '80%',
-            }}
-            variant="standard" />
-           </div> */}
 
           <div className={style.field__wrapper}>
            <label htmlFor='name'>What is Your Name:</label>
@@ -87,17 +57,13 @@ const ContactFrom = () => {
            <Field type="text" name="help" as='textarea' autocomplete="off" className={style.textarea__field}/>
            {errors.help && touched.help ? <div>{errors.help}</div> : null}
           </div>
-           
-           {/* <div>
-           <label htmlFor='help'>How can I Help you?:</label>
-           <EmptyTextarea id='help'/>
-           {errors.help && touched.help ? <div>{errors.help}</div> : null}
-           </div> */}
            <button type="submit" className={style.btn}>Send</button>
          </Form>
        )}
      </Formik>
    </div>
+   </Rotate>
+
 };
 
  export default ContactFrom

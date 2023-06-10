@@ -2,10 +2,13 @@ import React from "react";
 import styleContainer from "../../common/styles/ContainerStyles.module.css";
 import style from "./Contact.module.scss";
 import ContactFrom from "./ContactForm/ContactForm";
+import Rotate from 'react-reveal/Rotate';
+
 
 const Contact = () => {
   return (
     <div className={style.contacts}>
+          <Rotate top left>
       <div className={`${styleContainer.container}`}>
         <div className={style.contacts__blocks}>
           <div className={style.contacts__descr}>
@@ -31,8 +34,8 @@ const Contact = () => {
                 <ContactFrom />
         </div>  
         </div>
-        
       </div>
+      </Rotate>
     </div>
   );
 };

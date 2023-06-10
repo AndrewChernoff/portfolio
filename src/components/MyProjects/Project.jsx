@@ -1,7 +1,10 @@
 import style from "./Project.module.scss";
+import Roll from 'react-reveal/Roll';
 
 const Project = ({backgroundStyle, title, descr}) => {
-    return <div style={backgroundStyle} className={style.projectItem}>
+    return <Roll top>
+ 
+    <div style={backgroundStyle} className={style.projectItem}>
     <div className={style.imageContainer}>
         <div className={style.overlay}></div>
       <button>Look</button>
@@ -14,6 +17,7 @@ const Project = ({backgroundStyle, title, descr}) => {
       </div>
     </div>
   </div>
+  </Roll>
 }
 
 export default Project
