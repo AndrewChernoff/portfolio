@@ -8,6 +8,9 @@
         align-items: center;
         width: 100%;
         flex-wrap: wrap;
+        @media screen and (max-width: 750px) {
+            gap: 10px;
+        }
     }
 }
 
