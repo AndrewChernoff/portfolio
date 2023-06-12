@@ -1,10 +1,24 @@
 import { Link } from 'react-scroll'
 import style from "./Nav.module.scss";
+import { FaPhone } from "react-icons/fa";
 
-const Nav = () => {
+const Nav = ({handleMenuBtn, isOpen}) => {
   return (
     <div className={style.nav}>
-      <Link activeClass={style.active} to="main" spy={true} smooth={true} duration={500}>
+      <FaPhone style={{color: '#fff'}} />
+
+      <a href="tel:+79995849856">+7(999) 584-98-56</a>
+
+      <div className={style.burger} onClick={() => handleMenuBtn()}>
+        <div className={!isOpen ? style.bar1 : style.changeBar1}></div>
+        <div className={!isOpen ? style.bar1 : style.changeBar2}></div>
+        <div className={!isOpen ? style.bar1 : style.changeBar3}></div>
+      </div>
+
+      {
+        isOpen && <div className={style.overlay}>
+          <nav>
+        <Link activeClass={style.active} to="main" spy={true} smooth={true} duration={500}>
         Main
       </Link>
       <Link activeClass={style.active} to="skills" spy={true} smooth={true} duration={500}>
@@ -16,6 +30,9 @@ const Nav = () => {
       <Link activeClass={style.active} to="contacts" spy={true} smooth={true} duration={500}>
         Contacts
       </Link>
+      </nav>
+        </div>
+      }
     </div>
   );
 };

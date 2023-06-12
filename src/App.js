@@ -6,11 +6,16 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import MyProjects from './components/MyProjects/MyProjects';
 import Skills from './components/Skills/Skills';
+import { useState } from 'react';
 
 function App() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <div className="App">
-      <Header />
+      <Header isOpen={isOpen} handleMenuBtn={() => setIsOpen(!isOpen)}/>
       <Main />
       <AboutMe />
       <Skills />

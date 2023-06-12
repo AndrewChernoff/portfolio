@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Nav from '../Nav/Nav';
 import style from './Header.module.scss';
 
-const Header = () => {
+const Header = ({handleMenuBtn, isOpen}) => {
 
     const [colorChange, setColorchange] = useState(false);
     const changeNavbarColor = () => {
@@ -18,7 +18,7 @@ const Header = () => {
 
     return <div className={`${style.header} ${colorChange && style.color}`}>
         {/* <div className={style.nav}> */}
-        <Nav />
+        <Nav handleMenuBtn={handleMenuBtn} isOpen={isOpen}/>
         {/* </div> */}
     </div>
 }

@@ -9,9 +9,76 @@
     a {
         text-decoration: none;
         font-size: 1rem;
-        color: $textColor;
+        color: #fff;
     }
-    .active {
-        text-decoration: underline;
+    
+
+
+    .overlay {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 2;
+        cursor: pointer;
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10% auto;
+            a {
+                color: #fff;
+                font-size: 21px;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            .active {
+                color: $linkColor;
+            }
+        }
+    }
+
+    .burger {
+        z-index: 3;
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      .changeBar1 {
+        width: 35px;
+        height: 5px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+      .changeBar2 {
+        width: 35px;
+        height: 5px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+        opacity: 0;
+    }
+      
+      .changeBar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+        transform: translate(0, -11px) rotate(45deg);
+        background-color: #fff;
+      }
     }
 }
