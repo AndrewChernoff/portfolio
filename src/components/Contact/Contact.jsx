@@ -26,7 +26,7 @@ const Contact = () => {
 
             <div className={style.contacts__descr_item}>
               <h3>Call:</h3>
-              <p>+7(999)584-98-56</p>
+              <a className={style.phone} href="tel:+79995849856">+7(999) 584-98-56</a>
             </div>
           </div>
 

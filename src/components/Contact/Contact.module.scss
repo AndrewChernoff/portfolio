@@ -36,10 +36,12 @@
                 font-size: 21px;
                 margin: 0;
             }
-           address, p {
-            font-family: Poppins;
+           address, .phone, p {
+                font-family: Poppins;
                 font-size: 18px;
                 margin: 0;
+                color: rgb(33, 37, 41);
+                text-decoration: none;
                 @media screen and (max-width: 480px) {
                     font-size: 13px;
                 }
