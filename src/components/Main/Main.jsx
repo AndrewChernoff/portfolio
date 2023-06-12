@@ -3,7 +3,7 @@ import style from './Main.module.scss';
 import styleContainer from '../../common/styles/ContainerStyles.module.css';
 
 const Main = () => {
-    return <div className={style.main}>
+    return <div className={style.main} id='main'>
         <div className={styleContainer.container}>
             <div className={style.text}>
                 <span>HI, I'M FRONTEND DEVELOPER</span>

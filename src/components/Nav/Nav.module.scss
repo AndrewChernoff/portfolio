@@ -11,4 +11,7 @@
         font-size: 1rem;
         color: $textColor;
     }
+    .active {
+        text-decoration: underline;
+    }
 }

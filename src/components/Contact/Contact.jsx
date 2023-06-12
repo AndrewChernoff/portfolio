@@ -7,7 +7,7 @@ import Rotate from 'react-reveal/Rotate';
 
 const Contact = () => {
   return (
-    <div className={style.contacts}>
+    <div className={style.contacts} id='contacts'>
           <Rotate top left>
       <div className={`${styleContainer.container}`}>
         <div className={style.contacts__blocks}>

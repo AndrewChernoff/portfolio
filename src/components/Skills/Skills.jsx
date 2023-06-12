@@ -24,8 +24,7 @@ const Skills = () => {
         {skillName: 'Unit tests', percent: 70},
     ];
     
-    return <div className={style.skillsBlock}>
-         
+    return <div className={style.skillsBlock} id='skills'>    
         <div className={`${styleContainer.container} ${style.skillsContainer}`}>
         <Title title="Skills" titleDescr={"Technologies I know"} />
         {skills.map((el, i) => {
