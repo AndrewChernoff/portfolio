@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll'
 import ReactTypingEffect from 'react-typing-effect';
 import style from './Main.module.scss';
 import styleContainer from '../../common/styles/ContainerStyles.module.css';
@@ -31,7 +32,7 @@ const Main = () => {
 
                 <p>based in Chelyabinsk, Russia</p>
                 
-                <a href='#myWorks'>View my works</a>
+                <Link activeClass={style.active} to="myWorks" className={style.worksLink} spy={true} smooth={true} duration={500}>View my works</Link>
             </div>
             </div>
         </div>

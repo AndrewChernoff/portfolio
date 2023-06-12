@@ -44,7 +44,7 @@
     padding: 0.8rem 2.6rem;
     transition: all .5s ease;
     color: white;
-    background: black;
+    background: $backgroundColor;
     border: none;
     &:hover {
       background: rgb(49, 49, 49);

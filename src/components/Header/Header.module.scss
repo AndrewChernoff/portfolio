@@ -5,8 +5,20 @@
     justify-content: end;
     align-items: center;
     height: 80px;
-    background-color: $backgroundColor;
+    //background-color: $backgroundColor;
     position: fixed;
     width: 100%;
     z-index: 1;
+    transition: all 0.5s;
+
+    .nav {
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+}
+
+.color {
+    background-color: $backgroundColor;
+    transition: all 0.5s;
 }

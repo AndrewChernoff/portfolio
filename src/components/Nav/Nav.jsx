@@ -1,4 +1,4 @@
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 import style from "./Nav.module.scss";
 
 const Nav = () => {
