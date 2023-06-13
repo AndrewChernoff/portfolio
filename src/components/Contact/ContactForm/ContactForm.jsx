@@ -3,6 +3,7 @@ import React from 'react';
  import * as Yup from 'yup';
 import style from './ContactForm.module.scss'
 import Rotate from 'react-reveal/Rotate';
+import axios from 'axios';
  
  const SignupSchema  = Yup.object().shape({
    name: Yup.string()
@@ -10,13 +11,17 @@ import Rotate from 'react-reveal/Rotate';
      .max(50, 'Too Long!')
      .required('Required'),
    email: Yup.string().email('Invalid email').required('Required'),
-   help: Yup.string()
+   message: Yup.string()
      .min(1, 'Too Short!')
      .max(50, 'Too Long!')
      .required('Required'),
  });
  
 const ContactFrom = () => {
+
+  const sendFormData = (data) => {
+    axios.post('http://localhost:3010/sendMessage', data)
+  }
 
   return <Rotate top right> 
   <div className={style.my__form}>
@@ -26,12 +31,12 @@ const ContactFrom = () => {
      <Formik
        initialValues={{
          name: '',
-         help: '',
+         message: '',
          email: '',
        }}
        validationSchema={SignupSchema}
        onSubmit={values => {
-         console.log(values);
+        sendFormData(values);
        }}
      >
        {({ errors, touched }) => (
@@ -50,9 +55,9 @@ const ContactFrom = () => {
           </div>
 
           <div className={style.field__wrapper}>
-           <label htmlFor='help'>How can I Help you?:</label>
-           <Field type="text" name="help" as='textarea' autocomplete="off" className={style.textarea__field}/>
-           {errors.help && touched.help ? <div>{errors.help}</div> : null}
+           <label htmlFor='message'>How can I help you?:</label>
+           <Field type="text" name="message" as='textarea' autocomplete="off" className={style.textarea__field}/>
+           {errors.message && touched.message ? <div>{errors.message}</div> : null}
           </div>
            <button type="submit" className={style.btn}>Send</button>
          </Form>
