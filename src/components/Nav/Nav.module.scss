@@ -28,7 +28,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 35% auto;
+            margin: 15% auto;
+            @media screen and (max-width: 750px) {
+              margin: 35% auto;
+          }
             a {
                 color: #fff;
                 font-size: 21px;
