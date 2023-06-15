@@ -37,8 +37,9 @@ const ContactFrom = () => {
          email: '',
        }}
        validationSchema={SignupSchema}
-       onSubmit={values => {
+       onSubmit={(values, { resetForm }) => {
         sendFormData(values);
+        resetForm();
        }}
      >
        {({ errors, touched }) => (
