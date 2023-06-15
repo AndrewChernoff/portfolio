@@ -18,9 +18,11 @@ import axios from 'axios';
  });
  
 const ContactFrom = () => {
-
+/* 'http://localhost:3010/sendMessage' */
   const sendFormData = (data) => {
-    axios.post('http://localhost:3010/sendMessage', data)
+    axios.post('https://gmail-smtp-eta.vercel.app/sendMessage', data, {headers: {
+      'Content-Type': 'application/json'
+  }})
   }
 
   return <Rotate top right> 

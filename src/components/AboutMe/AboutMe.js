@@ -6,7 +6,7 @@ import Rotate from 'react-reveal/Rotate';
 
 const AboutMe = () => {
    return (
-     <div className={style.aboutMe}>
+     <div className={style.aboutMe} id="aboutMe">
        <div className={styleContainer.container}>
          <Title title="About me" titleDescr={"Know Me More"} />
 
