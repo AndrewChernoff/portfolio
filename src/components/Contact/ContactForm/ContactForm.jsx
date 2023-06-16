@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
  import { Formik, Form, Field } from 'formik';
  import * as Yup from 'yup';
 import style from './ContactForm.module.scss'
 import Rotate from 'react-reveal/Rotate';
 import axios from 'axios';
+import Alert from '@mui/material/Alert';
  
  const SignupSchema  = Yup.object().shape({
    name: Yup.string()
@@ -18,12 +19,36 @@ import axios from 'axios';
  });
  
 const ContactFrom = () => {
+
+  const [open, setOpen] = useState(false);
+  const [status, setStatus] = useState('')
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+    const handleClose = (event) => {
+    setOpen(false);
+  };
+
 /* 'http://localhost:3010/sendMessage' */
-  const sendFormData = (data) => {
-    axios.post('https://gmail-smtp-eta.vercel.app/sendMessage', data, {headers: {
-      'Content-Type': 'application/json'
-  }})
-  }
+  const sendFormData = async (data) => {
+    try {
+      await axios.post("https://gmail-smtp-eta.vercel.app/sendMessage", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+        setStatus("success");
+        setOpen(true);
+    } catch (e) {
+        setStatus("error");
+        setOpen(true);
+
+    } finally {
+      setTimeout(() => setOpen(false), 5000)
+    }
+  };
 
   return <Rotate top right> 
   <div className={style.my__form}>
@@ -45,6 +70,10 @@ const ContactFrom = () => {
        {({ errors, touched }) => (
          <Form >
 
+        {open && <Alert onClose={handleClose} severity={status} sx={{ width: '70%'}} style={{position:'fixed', width: '100%',left: '0', top: '10%', zIndex:'1'}}>
+            {status === 'error' ? 'Some error ' : 'This is a success message!'}
+          </Alert>}
+  
           <div className={style.field__wrapper}>
            <label htmlFor='name'>What is Your Name:</label>
            <Field type="text" name="name" autocomplete="off" className={style.textarea__field}/>
@@ -66,6 +95,7 @@ const ContactFrom = () => {
          </Form>
        )}
      </Formik>
+
    </div>
    </Rotate>
 
