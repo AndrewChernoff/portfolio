@@ -10,12 +10,9 @@ import { useState } from 'react';
 
 function App() {
 
-  const [isOpen, setIsOpen] = useState(false);
-
-
   return (
     <div className="App">
-      <Header isOpen={isOpen} handleMenuBtn={() => setIsOpen(!isOpen)}/>
+      <Header/>
       <Main />
       <AboutMe />
       <Skills />

@@ -23,11 +23,7 @@ const ContactFrom = () => {
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState('')
 
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-    const handleClose = (event) => {
+  const handleClose = () => {
     setOpen(false);
   };
 
@@ -70,7 +66,7 @@ const ContactFrom = () => {
        {({ errors, touched }) => (
          <Form >
 
-        {open && <Alert onClose={handleClose} severity={status} sx={{ width: '70%'}} style={{position:'fixed', width: '100%',left: '0', top: '10%', zIndex:'1'}}>
+        {open && <Alert onClose={handleClose} severity={status} sx={{ maxWidth: '100%'}} style={{position:'fixed', width: '100%',left: '0', top: '10%', zIndex:'1'}}>
             {status === 'error' ? 'Some error ' : 'This is a success message!'}
           </Alert>}
   

@@ -1,7 +1,7 @@
 @import '../../assets/sass/variables.scss';
 
 .footer {
-    min-height: 30vh;
+    min-height: 25vh;
     background-color: $backgroundColor;
 
     .footerContainer {
@@ -16,17 +16,9 @@
         .footerContent {
             display: flex;
             justify-content: space-between;
-            /* align-items: center;
-            flex-direction: column; */
             width: 40%;
 
-
-            /* height: 30px;
-                width: 30px;
-                background-color: grey; */
             @media screen and (max-width: 960px) {
-                //justify-content: center;
-                //margin-top: 5px;
                 flex-direction: column;
             }
 
@@ -36,6 +28,7 @@
                 flex-direction: column;
                 font-size: 16px;
                 color: $textColor;
+                text-decoration: none;
 
                 @media screen and (max-width: 960px) {
                     margin-top: 5px;
