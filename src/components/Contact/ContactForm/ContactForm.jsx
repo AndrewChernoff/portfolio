@@ -18,14 +18,14 @@ import Alert from '@mui/material/Alert';
      .required('Required'),
  });
  
-const ContactFrom = () => {
+const ContactFrom = ({setRequestError, setStatus, }) => {
 
-  const [open, setOpen] = useState(false);
+  /* const [open, setRequestError] = useState(false);
   const [status, setStatus] = useState('')
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+ */
+ /*  const handleClose = () => {
+    setRequestError(false);
+  }; */
 
 /* 'http://localhost:3010/sendMessage' */
   const sendFormData = async (data) => {
@@ -36,13 +36,13 @@ const ContactFrom = () => {
         },
       });
         setStatus("success");
-        setOpen(true);
+        setRequestError(true);
     } catch (e) {
         setStatus("error");
-        setOpen(true);
+        setRequestError(true);
 
     } finally {
-      setTimeout(() => setOpen(false), 5000)
+      setTimeout(() => setRequestError(false), 5000)
     }
   };
 
@@ -66,9 +66,9 @@ const ContactFrom = () => {
        {({ errors, touched }) => (
          <Form >
 
-        {open && <Alert onClose={handleClose} severity={status} sx={{ maxWidth: '100%'}} style={{position:'fixed', width: '100%',left: '0', top: '10%', zIndex:'1'}}>
+        {/* {requestError && <Alert onClose={handleClose} severity={status} sx={{ maxWidth: '100%'}} style={{position:'fixed', width: '100%',left: '0', top: '10%', zIndex:'1'}}>
             {status === 'error' ? 'Some error ' : 'This is a success message!'}
-          </Alert>}
+          </Alert>} */}
   
           <div className={style.field__wrapper}>
            <label htmlFor='name'>What is Your Name:</label>

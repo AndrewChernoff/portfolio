@@ -5,7 +5,7 @@ import ContactFrom from "./ContactForm/ContactForm";
 import Rotate from 'react-reveal/Rotate';
 
 
-const Contact = () => {
+const Contact = ({setRequestError, requestError, setStatus, status}) => {
   return (
     <div className={style.contacts} id='contacts'>
           <Rotate top left>
@@ -31,7 +31,7 @@ const Contact = () => {
           </div>
 
           <div className={style.contacts__form}>
-                <ContactFrom />
+                <ContactFrom setRequestError={setRequestError} requestError={requestError} setStatus={setStatus} status={status} />
         </div>  
         </div>
       </div>
