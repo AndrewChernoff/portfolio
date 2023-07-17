@@ -20,6 +20,7 @@ import Alert from '@mui/material/Alert';
  
 const ContactFrom = ({setRequestError, setStatus, }) => {
 
+
 /* 'http://localhost:3010/sendMessage' */
   const sendFormData = async (data) => {
     try {
@@ -61,19 +62,19 @@ const ContactFrom = ({setRequestError, setStatus, }) => {
   
           <div className={style.field__wrapper}>
            <label htmlFor='name'>What is Your Name:</label>
-           <Field type="text" name="name" autocomplete="off" className={style.textarea__field}/>
+           <Field type="text" name="name" className={style.textarea__field}/>
            {errors.name && touched.name ? <div>{errors.name}</div> : null}
           </div>
 
           <div className={style.field__wrapper}>
            <label htmlFor='email'>Your Email Address:</label>
-           <Field type="text" name="email" autocomplete="off" className={style.textarea__field}/>
+           <Field type="text" name="email" className={style.textarea__field}/>
            {errors.email && touched.email ? <div>{errors.email}</div> : null}
           </div>
 
           <div className={style.field__wrapper}>
            <label htmlFor='message'>How can I help you?:</label>
-           <Field type="text" name="message" as='textarea' autocomplete="off" className={style.textarea__field}/>
+           <Field type="text" name="message" as='textarea' className={style.textarea__field}/>
            {errors.message && touched.message ? <div>{errors.message}</div> : null}
           </div>
            <button type="submit" className={style.btn}>Send</button>
