@@ -26,14 +26,11 @@
       width: 100%;
   }
 
-    &:hover {
-      border-bottom: 2px black solid;
-      background: $formBackgroundColor;
-    }
-
-    &:focus {
-      outline: none;
-      background: $formBackgroundColor;
+  &:focus,
+  &:-webkit-autofill {
+    outline: none;
+    background: $formBackgroundColor;
+    -webkit-box-shadow: 0 0 0 30px  #f5df4e inset !important;
     }
   }
 }
