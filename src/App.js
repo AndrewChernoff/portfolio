@@ -25,7 +25,7 @@ function App() {
       <Skills />
       <MyProjects />
       {requestError && <Alert onClose={handleClose} severity={status} sx={{ maxWidth: '40%'}} style={{position:'fixed', width: '100%', left: '30%', top: '10%', zIndex:'1'}}>
-            {status === 'error' ? 'Some error ' : 'This is a success message!'}
+            {status === 'error' ? 'Some error ' : 'Message has been sent!'}
           </Alert>}
       <Contact setRequestError={setRequestError} requestError={requestError} setStatus={setStatus} status={status}/>
       <Footer />

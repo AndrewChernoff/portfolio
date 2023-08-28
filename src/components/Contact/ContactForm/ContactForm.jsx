@@ -5,6 +5,9 @@ import style from './ContactForm.module.scss'
 import Rotate from 'react-reveal/Rotate';
 import axios from 'axios';
 import Alert from '@mui/material/Alert';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+
  
  const SignupSchema  = Yup.object().shape({
    name: Yup.string()
@@ -21,22 +24,33 @@ import Alert from '@mui/material/Alert';
 const ContactFrom = ({setRequestError, setStatus, }) => {
 
 
-/* 'http://localhost:3010/sendMessage' */
+  const form = useRef();
+
+
   const sendFormData = async (data) => {
     try {
-      await axios.post("https://gmail-smtp-eta.vercel.app/sendMessage", data, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-        setStatus("success");
-        setRequestError(true);
+      emailjs
+        .sendForm(
+          "service_v2brkss",
+          "template_umalkri",
+          form.current,
+          "nGlXldfsUpxtuxMVb"
+        )
+        .then(
+          () => {
+            setStatus("success");
+            setRequestError(true);
+          },
+          (error) => {
+            setStatus("error");
+            setRequestError(true);
+          }
+        );
     } catch (e) {
-        setStatus("error");
-        setRequestError(true);
-
+      setStatus("error");
+      setRequestError(true);
     } finally {
-      setTimeout(() => setRequestError(false), 5000)
+      setTimeout(() => setRequestError(false), 5000);
     }
   };
 
@@ -58,8 +72,7 @@ const ContactFrom = ({setRequestError, setStatus, }) => {
        }}
      >
        {({ errors, touched }) => (
-         <Form >
-  
+         <Form ref={form}>
           <div className={style.field__wrapper}>
            <label htmlFor='name'>What is Your Name:</label>
            <Field type="text" name="name" className={style.textarea__field}/>
@@ -81,7 +94,6 @@ const ContactFrom = ({setRequestError, setStatus, }) => {
          </Form>
        )}
      </Formik>
-
    </div>
    </Rotate>
 
