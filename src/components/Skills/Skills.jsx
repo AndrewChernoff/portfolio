@@ -7,12 +7,13 @@ const Skills = () => {
     
     const skills = [
         {skillName: 'HTML & CSS', percent: 85},
-        {skillName: 'JavaScript', percent: 75},
-        {skillName: 'Typescript', percent: 70},
+        {skillName: 'JavaScript', percent: 74},
+        {skillName: 'Typescript', percent: 72},
         {skillName: 'Express', percent: 70},
         {skillName: 'React', percent: 85},
-        {skillName: 'Redux', percent: 80},
-        {skillName: 'Redux-toolkit', percent: 75},
+        {skillName: 'Redux', percent: 83},
+        {skillName: 'Redux-toolkit', percent: 76},
+        {skillName: 'MobX', percent: 72},
         {skillName: 'Material UI', percent: 80},
         {skillName: 'Unit tests', percent: 70},
     ];

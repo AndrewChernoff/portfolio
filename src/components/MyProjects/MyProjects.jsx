@@ -7,6 +7,7 @@ import todolist from "../../assets/images/todolist.png"
 import carLeasing from "../../assets/images/carCalc.jpg"
 import quiz from "../../assets/images/quiz.jpg"
 import counter from "../../assets/images/counter.png"
+import lebron from "../../assets/images/lebron.jpg"
 
 const MyProjects = () => {
 
@@ -29,6 +30,10 @@ const MyProjects = () => {
   const counterImg = {
     background: `url(${counter}) center center/cover no-repeat`
   }
+
+  const lebronImg = {
+    background: `url(${lebron}) center center/cover no-repeat`
+  }
   
 
   const projects = [
@@ -37,6 +42,7 @@ const MyProjects = () => {
     {title: 'Car leasing calculator', backgroundStyle: carLeasingImg, link: 'https://andrewchernoff.github.io/carleasing'},
     {title: 'Quiz', backgroundStyle: quizImg, link: 'https://andrewchernoff.github.io/quiz'},
     {title: 'Counter', backgroundStyle: counterImg, link: 'https://counter-gbz8.vercel.app/'},
+    {title: 'NBA players', backgroundStyle: lebronImg, link: 'https://players-trading.vercel.app/'},
   ]
 
   return (
