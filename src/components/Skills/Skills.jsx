@@ -13,7 +13,7 @@ const Skills = () => {
         {skillName: 'Next', percent: 70},
         {skillName: 'Express', percent: 73},
         {skillName: 'MongoDB', percent: 70},
-        {skillName: 'Redux(Redux-toolkit, RTK Query)', percent: 83},
+        {skillName: 'Redux (Redux-toolkit, RTK Query)', percent: 83},
         {skillName: 'MobX', percent: 70},
         {skillName: 'Material UI', percent: 80},
         {skillName: 'Unit tests', percent: 70},
