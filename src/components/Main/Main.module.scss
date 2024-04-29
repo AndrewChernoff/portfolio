@@ -1,9 +1,10 @@
-@import '../../assets/sass/variables.scss'; 
+@import '../../assets/sass/variables.scss';
 
 .main {
     background: rgb(222, 199, 210);
     height: 100vh;
     background: url('../../assets//images/background_img.jpg') center center/cover no-repeat;
+
     .text {
         display: flex;
         flex-direction: column;
@@ -11,24 +12,26 @@
         color: #fff;
         max-width: 350px;
         margin: 0 auto;
-        white-space: nowrap; 
+        white-space: nowrap;
 
         span {
             font-size: 32px;
         }
 
-        .name {
-            display: flex;
-            flex-direction: row;
-            font-size: 50px;
-            margin: 0;
+        .smt {
+            span {
+                font-size: 50px;
+                @media screen and (max-width: 500px) { 
+                    font-size: 40px;
+                }
+            }
         }
 
         p {
             font-size: 21px;
         }
 
-        a  {
+        a {
             background-color: $titleColor;
             border-color: $titleColor;
             color: #212529;
@@ -36,24 +39,26 @@
             text-decoration: none;
             font-size: 16px;
             font-family: 600;
-                &:hover {
-                        background-color: #eacd12;
-                        cursor: pointer;
-                    }
+
+            &:hover {
+                background-color: #eacd12;
+                cursor: pointer;
+            }
         }
+
         @media screen and (max-width: 500px) {
             span {
                 font-size: 20px;
             }
-    
+
             .name {
                 font-size: 30px;
             }
-    
+
             p {
                 font-size: 16px;
             }
-          }
+        }
     }
 
     .photo {
