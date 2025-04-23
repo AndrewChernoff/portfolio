@@ -12,11 +12,11 @@ const Skills = () => {
         {skillName: 'React', percent: 85},
         {skillName: 'Next', percent: 70},
         {skillName: 'Express', percent: 73},
-        {skillName: 'MongoDB', percent: 70},
+        {skillName: 'Mongoose', percent: 70},
+        {skillName: 'Prisma', percent: 72},
         {skillName: 'Redux (Redux-toolkit, RTK Query)', percent: 83},
         {skillName: 'MobX', percent: 70},
         {skillName: 'Material UI', percent: 80},
-        {skillName: 'Unit tests', percent: 70},
     ];
     
     return <div className={style.skillsBlock} id='skills'>    

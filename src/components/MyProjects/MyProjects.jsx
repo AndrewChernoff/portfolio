@@ -38,7 +38,7 @@ const MyProjects = () => {
     {
       title: "Todolist",
       backgroundStyle: todolistImg,
-      link: "https://todolist-redux-toolkit-pi.vercel.app/login",
+      link: "https://todolist-redux-toolkit-omega.vercel.app/login",
     },
     {
       title: "Car leasing calculator",
