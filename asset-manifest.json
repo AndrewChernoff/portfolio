@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.e2e6978a.css",
+    "main.js": "/portfolio/static/js/main.73fbe529.js",
+    "static/js/787.128fc6e9.chunk.js": "/portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/background_img.jpg": "/portfolio/static/media/background_img.440f09928f09107645f7.jpg",
+    "static/media/counter.png": "/portfolio/static/media/counter.d01e74ccc58abeeceae4.png",
+    "static/media/carCalc.jpg": "/portfolio/static/media/carCalc.60cc286be2577b381738.jpg",
+    "static/media/flashcards.webp": "/portfolio/static/media/flashcards.380a633a1c32bee77c1b.webp",
+    "index.html": "/portfolio/index.html",
+    "main.e2e6978a.css.map": "/portfolio/static/css/main.e2e6978a.css.map",
+    "main.73fbe529.js.map": "/portfolio/static/js/main.73fbe529.js.map",
+    "787.128fc6e9.chunk.js.map": "/portfolio/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2e6978a.css",
+    "static/js/main.73fbe529.js"
+  ]
+}
